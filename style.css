@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=EB+Garamond&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body, html {
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    background:#222725;
+    scroll-behavior: smooth;
+    height:100%;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+.logo:hover{ color:#EBEB2F; }
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+.nav-links li{ margin-left:25px; }
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    transition:0.3s;
+}
+.nav-links a:hover{
+    color:#00e0ff;
+    text-shadow:0 0 8px #00e0ff;
+}
+
+.menu-btn{ display:none; font-size:26px; color:white; cursor:pointer; }
+
+@media(max-width:768px){
+    .nav-links{
+        position:absolute; top:70px; left:0; width:100%;
+        flex-direction:column; align-items:center; text-align:center;
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(10px);
+        display:none;
+    }
+    .nav-links li{ margin:20px 0; }
+    .nav-links.active{ display:flex; }
+    .menu-btn{ display:block; }
+}
+
+/* Section Styles */
+.section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+    padding:50px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.section.show{
+    opacity:1;
+    transform: translateY(0);
+}
+
+/* About Section */
+.about-content{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    gap:50px;
+}
+
+.about-text{ max-width:500px; color:white; }
+#name{ font-family:'Archivo Black'; font-size:60px; font-weight:bolder; }
+#para{ font-family:'EB Garamond'; font-size:20px; font-weight:500; margin:20px 0; }
+#skills-title{ font-family:'Poppins', sans-serif; font-size:20px; color:white; }
+
+.about-image img{
+    border-radius:50%;
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    transition: all 0.5s ease;
+}
+.about-image img:hover{ box-shadow:0px 5px 5px 10px rgba(140,224,228,0.3); }
+
+/* Skills Section */
+.skills-content{text-align:center; color:white;}
+.section-title{ font-family:'Archivo Black'; font-size:50px; margin-bottom:50px; letter-spacing:1px; }
+
+.skills-cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.skill-card{
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    width:220px;
+    padding:30px;
+    border-radius:15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover{
+    transform: translateY(-10px);
+    box-shadow:0px 10px 20px rgba(0,255,255,0.3);
+}
+
+.skill-card i{ margin-bottom:15px; }
+.skill-card h4{ margin-bottom:15px; font-family:'Poppins', sans-serif; }
+.skill-bar{
+    background: rgba(255,255,255,0.2);
+    height:10px;
+    border-radius:10px;
+    overflow:hidden;
+}
+.skill-level{
+    height:100%;
+    background:#00e0ff;
+    width:0;
+    border-radius:10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Services Section */
+.services-content{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    text-align:center;
+}
+
+.card{
+    border:none;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    color:white;
+    padding:30px;
+    width:250px;
+    transition: transform 0.3s;
+}
+.card:hover{ transform: translateY(-10px); }
+
+/* Contact Section */
+.contact-content{ 
+    display:flex; 
+    flex-direction:column;
+     align-items:center;
+      width:100%;
+       }
+.contact-form{
+     width:100%;
+    max-width:500px;
+    background: rgba(255,255,255,0.05); 
+    backdrop-filter: blur(10px); 
+    padding:30px;
+    color:white; 
+}
+/* Glass Footer */
+
+.footer{
+    width:100%;
+    padding:18px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-top:1px solid rgba(255,255,255,0.2);
+}
+
+.footer-text{
+    color:white !important;
+    font-family:'Poppins', sans-serif;
+    font-size:15px;
+    letter-spacing:1px;
+    margin:0;
+}
+
+.footer-text:hover{
+    color:#00e0ff !important;
+    transition:0.3s;
+}

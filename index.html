@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio - Saadi</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo" id="s1">PortFolio</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-btn">☰</div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 id="name">Saad Salman</h2>
+                <p id="para">
+                    I’m a 3rd-year BS IT student and a passionate web developer focused on crafting clean and responsive front-end experiences. I also have a growing understanding of back-end technologies and system concepts. I enjoy exploring new ideas, building projects, and continuously improving my skills in the world of tech.
+                </p>
+               
+            </div>
+            <div class="about-image">
+                <img src="img/profile.jpeg" alt="Profile" id="img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="skills-content text-center">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-cards">
+                <div class="skill-card">
+                    <i class="fab fa-html5 fa-3x text-danger"></i>
+                    <h4>HTML5</h4>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt fa-3x text-primary"></i>
+                    <h4>CSS3</h4>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js-square fa-3x text-warning"></i>
+                    <h4>JavaScript</h4>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-bootstrap fa-3x text-info"></i>
+                    <h4>Bootstrap</h4>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="services-content">
+            <div class="card">
+                <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                <h4>Web Development</h4>
+                <p>Modern, responsive websites using HTML, CSS, JavaScript & frameworks</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mobile-alt fa-3x text-success mb-3"></i>
+                <h4>Mobile Responsive</h4>
+                <p>Fully responsive designs that work perfectly on all devices</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-rocket fa-3x text-warning mb-3"></i>
+                <h4>Fast Performance</h4>
+                <p>Optimized code for lightning-fast loading speeds</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="contact-content">
+            <h2 class="text-center mb-5 text-white">Get In Touch</h2>
+            <div class="card p-4 contact-form">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
+     <footer class="footer">
+        <p class="footer-text">&copy; 2026 Saad Salman • All Rights Reserved</p>
+        </footer>
+    </section>
+
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
