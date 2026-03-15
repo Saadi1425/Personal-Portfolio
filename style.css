@@ -29,37 +29,64 @@ body, html {
     font-weight:600;
     letter-spacing:1px;
 }
-.logo:hover{ color:#EBEB2F; }
+
+.logo:hover{
+     color:#EBEB2F;
+}
 
 .nav-links{
     display:flex;
     list-style:none;
 }
-.nav-links li{ margin-left:25px; }
+
+.nav-links li{ 
+    margin-left:25px;
+}
+
 .nav-links a{
     color:white;
     text-decoration:none;
     font-size:16px;
     transition:0.3s;
 }
+
 .nav-links a:hover{
     color:#00e0ff;
     text-shadow:0 0 8px #00e0ff;
 }
 
-.menu-btn{ display:none; font-size:26px; color:white; cursor:pointer; }
+.menu-btn{
+    display:none; 
+    font-size:26px; 
+    color:white;
+    cursor:pointer;
+}
 
 @media(max-width:768px){
     .nav-links{
-        position:absolute; top:70px; left:0; width:100%;
-        flex-direction:column; align-items:center; text-align:center;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        flex-direction:column; 
+        align-items:center;
+        text-align:center;
         background: rgba(0,0,0,0.7);
         backdrop-filter: blur(10px);
         display:none;
     }
-    .nav-links li{ margin:20px 0; }
-    .nav-links.active{ display:flex; }
-    .menu-btn{ display:block; }
+
+.nav-links li{
+     margin:20px 0;
+ }
+   
+.nav-links.active{
+     display:flex; 
+}
+   
+.menu-btn{
+ display:block;
+  }
 }
 
 /* Section Styles */
@@ -91,10 +118,21 @@ body, html {
     gap:50px;
 }
 
-.about-text{ max-width:500px; color:white; }
-#name{ font-family:'Archivo Black'; font-size:60px; font-weight:bolder; }
-#para{ font-family:'EB Garamond'; font-size:20px; font-weight:500; margin:20px 0; }
-#skills-title{ font-family:'Poppins', sans-serif; font-size:20px; color:white; }
+.about-text{ 
+    max-width:500px; 
+    color:white;
+}
+
+#name{ font-family:'Archivo Black'; 
+    font-size:60px;
+    font-weight:bolder; 
+}
+
+#para{ font-family:'EB Garamond'; 
+    font-size:20px; 
+    font-weight:500;
+    margin:20px 0;
+}
 
 .about-image img{
     border-radius:50%;
@@ -103,11 +141,23 @@ body, html {
     object-fit:cover;
     transition: all 0.5s ease;
 }
-.about-image img:hover{ box-shadow:0px 5px 5px 10px rgba(140,224,228,0.3); }
+
+.about-image img:hover{ 
+    box-shadow:0px 5px 5px 10px rgba(140,224,228,0.3);
+}
 
 /* Skills Section */
-.skills-content{text-align:center; color:white;}
-.section-title{ font-family:'Archivo Black'; font-size:50px; margin-bottom:50px; letter-spacing:1px; }
+.skills-content{
+    text-align:center;
+    color:white;
+ }
+
+.section-title{ 
+    font-family:'Archivo Black';
+    font-size:50px;
+    margin-bottom:50px;
+    letter-spacing:1px;
+}
 
 .skills-cards{
     display:flex;
@@ -130,8 +180,15 @@ body, html {
     box-shadow:0px 10px 20px rgba(0,255,255,0.3);
 }
 
-.skill-card i{ margin-bottom:15px; }
-.skill-card h4{ margin-bottom:15px; font-family:'Poppins', sans-serif; }
+.skill-card i{ 
+    margin-bottom:15px;
+}
+
+.skill-card h4{
+    margin-bottom:15px; 
+    font-family:'Poppins', sans-serif;
+}
+
 .skill-bar{
     background: rgba(255,255,255,0.2);
     height:10px;
@@ -164,36 +221,121 @@ body, html {
     width:250px;
     transition: transform 0.3s;
 }
-.card:hover{ transform: translateY(-10px); }
+
+.card:hover{ 
+    transform: translateY(-10px);
+}
 
 /* Contact Section */
-.contact-content{ 
-    display:flex; 
-    flex-direction:column;
-     align-items:center;
-      width:100%;
-       }
 .contact-form{
-     width:100%;
+    width:100%;
     max-width:500px;
     background: rgba(255,255,255,0.05); 
     backdrop-filter: blur(10px); 
     padding:30px;
-    color:white; 
+    color:white;
+    margin:0 auto;
+    transition:0.4s;
 }
-/* Glass Footer */
 
+.contact-form:hover{
+    box-shadow:0 10px 30px rgba(0,224,255,0.3);
+}
+
+.input-field{
+    background:rgba(255,255,255,0.08);
+    border:none;
+    color:white;
+    transition:0.3s;
+}
+
+.input-field:focus{
+    background:rgba(255,255,255,0.12);
+    box-shadow:0 0 10px #00e0ff;
+    border:1px solid #00e0ff;
+    color:white;
+}
+
+.send-btn{
+    background:#00e0ff;
+    border:none;
+    font-weight:500;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.send-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 15px #00e0ff, 0 0 25px #00e0ff;
+}
+
+/* Social Section */
+.social-section{
+    text-align:center;
+    margin-top:60px;
+}
+
+.social-title{
+    color:white;
+    font-size:32px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:20px;
+    text-shadow:0 0 5px #00e0ff,
+                0 0 10px #00e0ff,
+                0 0 20px #00e0ff;
+    animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse{
+    from{
+        text-shadow:0 0 5px #00e0ff,
+                    0 0 10px #00e0ff,
+                    0 0 20px #00e0ff;
+    }
+
+to{
+        text-shadow:0 0 10px #00e0ff,
+                    0 0 20px #00e0ff,
+                    0 0 35px #00e0ff;
+    }
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.social-links a{
+    color:white;
+    font-size:28px;
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+.social-links a:hover{
+    transform:translateY(-8px) scale(1.1);
+    color:#00e0ff;
+    box-shadow:0 0 15px #00e0ff;
+}
+
+/* Footer */
 .footer{
     width:100%;
     padding:18px 0;
     display:flex;
     justify-content:center;
     align-items:center;
-
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
     border-top:1px solid rgba(255,255,255,0.2);
 }
 
@@ -208,4 +350,50 @@ body, html {
 .footer-text:hover{
     color:#00e0ff !important;
     transition:0.3s;
+}
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255,255,255,0.05); 
+    backdrop-filter: blur(10px); 
+    padding: 30px;
+    color: white;
+    margin: 50px auto; /* Added margin so it’s not flush to top */
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-field {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background: rgba(255,255,255,0.08);
+}
+
+.send-btn {
+    padding: 12px;
+    border-radius: 8px;
+    background: #00e0ff;
+    color: #222725;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.send-btn:hover {
+    box-shadow: 0 0 15px #00e0ff;
+    transform: translateY(-3px);
+}
+
+/* Thank you message */
+.thankyou-message {
+    color: #00e0ff;
+    font-weight: 500;
+    margin-top: 10px;
 }

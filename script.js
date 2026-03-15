@@ -35,3 +35,14 @@ const skillsObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 
 skillsObserver.observe(skillSection);
+
+const contactForm = document.querySelector('#contact form');
+const thankyouMsg = document.querySelector('.thankyou-message');
+
+contactForm.addEventListener('submit', e => {
+  // prevent default so Formspree still works
+  setTimeout(() => {
+    thankyouMsg.style.display = 'block';
+    contactForm.reset();
+  }, 100);
+});
